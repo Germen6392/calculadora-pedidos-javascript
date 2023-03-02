@@ -6,19 +6,26 @@
 </head>
 <body>
 <h1 class="titulo-principal">Calculadora</h1> 
-    <h2>Coloca en km las distintas distancias recorridas</h2>
+    <h2>Coloca la siguiente información para calcular las ganancias</h2>
     <ul>
 <form>
-  <input type="number" step="0.01" id="distancia-inicio" name="distance"> 
-  <label for="distancia-inicio">Distancia al Local</label><br>
-  <input type="number" step="0.01" id="distancia-fin" name="distance"> 
-  <label for="distancia-fin">Distancia al Cliente</label><br>
-  <label for="resultado">Tu ganancia es de $</label>
-  <input id="resultado" type="number"step="">
-  <button id="sumar">Pagar</button>
- 
-</form>
-<button id="enviar-operacion">Calcular</button>
+    <fieldset>
+        <legend>Coloca en km</legend>
+        <input type="number" step="0.01" id="distancia-inicio" name="distance"> 
+        <label for="distancia-inicio">Distancia al Local</label><br>
+        <input type="number" step="0.01" id="distancia-fin" name="distance"> 
+        <label for="distancia-fin">Distancia al Cliente</label><br>
+    
+    </fieldset>
+    <fieldset>  
+        <legend>El valor a calcular dependerá de tu desempeño</legend>
+        <label for="adicional">Adicional Grupo</label><br>
+        <input id="adicional" type="number">
+    </fieldset>
+    <label for="resultado">Tu ganancia es de $</label>
+    <input id="resultado" type="number" step="">
+    <button id="sumar">Pagar</button>
+</form> 
 
 <script src="calculadora.js"></script>
 </body>
