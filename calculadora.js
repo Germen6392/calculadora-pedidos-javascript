@@ -1,25 +1,22 @@
 // Datos
-let ordenLocal = 90;
-let ordenCliente = 45;
-let km = 30;
-let adicional = 12;
+const ordenLocal = 90;
+const ordenCliente = 45;
+const km = 30;
+const adicional = 12;
 
-let distanciaLocal = document.getElementById("distancia-inicio").value;
+// Variables
+const distanciaInicial = document.getElementById("distancia-inicio");
+const distanciaFinal = document.getElementById("distancia-fin");
+const ganancia = document.getElementById("resultado");
+const suma = document.getElementById("sumar");
+const btncalcular = document.getElementById("enviar-operacion");
 
-let distanciaCliente =  document.getElementById("distancia-fin").value;
+btncalcular.addEventListener("click",(e)=> {
+console.log(e);
+});
 
-function crearImporte(){
-    const pedido = ordenLocal + ordenCliente + distanciaLocal * km + distanciaCliente * km + adicional * distanciaCliente;
-    const mostrarResultado = document.getElementById("resultado").innerHTML = pedido;
-    return mostrarResultado;
-}
-
-let nose = document.getElementById("btn-calcular").addEventListener("click", crearImporte()=>( {
-    
- const pedido = ordenLocal + ordenCliente + distanciaLocal * km + distanciaCliente * km + adicional * distanciaCliente;
-    const mostrarResultado = document.getElementById("resultado").innerHTML = pedido;
-    return mostrarResultado;
-
-}));
-
+suma.addEventListener("click",(e)=>{
+e.preventDefault();
+ganancia.value =(ordenLocal + ordenCliente + distanciaInicial.value*km + distanciaFinal.value*km + adicional*distanciaFinal.value);
+})
 
