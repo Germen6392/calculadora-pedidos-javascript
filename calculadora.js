@@ -1,9 +1,9 @@
 // Datos
-const ordenLocal = 90;
-const ordenCliente = 45;
 const km = 30;
 
 // Variables
+const ordenLocal = Number(document.querySelector(".orden-local").textContent);
+const ordenCliente = Number(document.querySelector(".orden-cliente").textContent);
 const distanciaInicial = document.getElementById("distancia-inicio");
 const distanciaFinal = document.getElementById("distancia-fin");
 const adicional = document.getElementById("adicional");
